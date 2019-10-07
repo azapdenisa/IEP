@@ -1,0 +1,27 @@
+#ifndef HELLO_CONFIG_HPP
+#define HELLO_CONFIG_HPP
+
+#include <iostream>
+
+#ifndef COPYRIGHT_INFO
+#define COPYRIGHT_INFO "Copyright 03"
+#endif
+
+namespace hello {
+
+///\brief Text to get displayed
+const auto str_hello = @STR_HELLO@;
+const auto str_timeis = @STR_TIMEIS@;
+const auto str_goodbye = @STR_GOODBYE@;
+
+inline void version()
+{
+    std::cout << "Application " << "@APP_TITLE@" << std::endl 
+              << "Version " << "@APP_VERSION@" << std::endl 
+              << COPYRIGHT_INFO << std::endl
+              << std::endl;
+}
+
+} // namespace hello
+
+#endif // HELLO_CONFIG_HPP

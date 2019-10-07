@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../inc/hello/hello.hpp
+
+/home/denia/Downloads/IEP/IEP-LAB1/03/03/src/hello.cpp
+hello/hello.hpp
+-
+hello/hello_config.hpp
+-
+chrono
+-
+ctime
+-
+
+/home/denia/Downloads/IEP/IEP-LAB1/03/03/src/main.cpp
+hello/hello.hpp
+-
+

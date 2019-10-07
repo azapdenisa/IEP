@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.2)
+project(myapp)
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+include_directories(inc)
+add_executable(myapp src/hello.cpp src/main.cpp inc/hello/hello.hpp inc/hello/hello_config.hpp)
