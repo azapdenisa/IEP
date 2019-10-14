@@ -4,9 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/denia/Downloads/IEP/IEP-LAB1/02/02/src/main.cpp" "/home/denia/Downloads/IEP/IEP-LAB1/02/02/build/CMakeFiles/myapp.dir/src/main.cpp.o"
+  "/home/denia/Downloads/IEP/IEP-LAB1/02/02/src/hello.cpp" "/home/denia/Downloads/IEP/IEP-LAB1/02/02/build/CMakeFiles/lab2.dir/src/hello.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
+
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "lab2_EXPORTS"
+  )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

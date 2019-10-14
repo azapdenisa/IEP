@@ -1,3 +1,4 @@
 /home/denia/Downloads/IEP/IEP-LAB1/02/02/build/CMakeFiles/rebuild_cache.dir
-/home/denia/Downloads/IEP/IEP-LAB1/02/02/build/CMakeFiles/myapp.dir
 /home/denia/Downloads/IEP/IEP-LAB1/02/02/build/CMakeFiles/edit_cache.dir
+/home/denia/Downloads/IEP/IEP-LAB1/02/02/build/CMakeFiles/lab2exec.dir
+/home/denia/Downloads/IEP/IEP-LAB1/02/02/build/CMakeFiles/lab2.dir

@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/lab2exec.dir/src/main.cpp.o  -o lab2exec -Wl,-rpath,/home/denia/Downloads/IEP/IEP-LAB1/02/02/build liblab2.so 

@@ -1,7 +1,11 @@
 cmake_minimum_required(VERSION 3.2)
-project(myapp)
+project(lab2)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 include_directories(inc)
-add_executable(myapp src/hello.cpp src/main.cpp inc/hello/hello.hpp inc/hello/hello_config.hpp)
+add_executable(lab2exec src/main.cpp)
+set(myfiles src/hello.cpp inc/hello/hello.hpp inc/hello/hello_config.hpp)
+add_library(lab2 SHARED ${myfiles}) 
+target_link_libraries(lab2exec lab2)
+

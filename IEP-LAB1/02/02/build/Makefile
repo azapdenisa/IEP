@@ -111,17 +111,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named myapp
+# Target rules for targets named lab2exec
 
 # Build rule for target.
-myapp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 myapp
-.PHONY : myapp
+lab2exec: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lab2exec
+.PHONY : lab2exec
 
 # fast build rule for target.
-myapp/fast:
-	$(MAKE) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/build
-.PHONY : myapp/fast
+lab2exec/fast:
+	$(MAKE) -f CMakeFiles/lab2exec.dir/build.make CMakeFiles/lab2exec.dir/build
+.PHONY : lab2exec/fast
+
+#=============================================================================
+# Target rules for targets named lab2
+
+# Build rule for target.
+lab2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lab2
+.PHONY : lab2
+
+# fast build rule for target.
+lab2/fast:
+	$(MAKE) -f CMakeFiles/lab2.dir/build.make CMakeFiles/lab2.dir/build
+.PHONY : lab2/fast
 
 src/hello.o: src/hello.cpp.o
 
@@ -129,7 +142,7 @@ src/hello.o: src/hello.cpp.o
 
 # target to build an object file
 src/hello.cpp.o:
-	$(MAKE) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/hello.cpp.o
+	$(MAKE) -f CMakeFiles/lab2.dir/build.make CMakeFiles/lab2.dir/src/hello.cpp.o
 .PHONY : src/hello.cpp.o
 
 src/hello.i: src/hello.cpp.i
@@ -138,7 +151,7 @@ src/hello.i: src/hello.cpp.i
 
 # target to preprocess a source file
 src/hello.cpp.i:
-	$(MAKE) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/hello.cpp.i
+	$(MAKE) -f CMakeFiles/lab2.dir/build.make CMakeFiles/lab2.dir/src/hello.cpp.i
 .PHONY : src/hello.cpp.i
 
 src/hello.s: src/hello.cpp.s
@@ -147,7 +160,7 @@ src/hello.s: src/hello.cpp.s
 
 # target to generate assembly for a file
 src/hello.cpp.s:
-	$(MAKE) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/hello.cpp.s
+	$(MAKE) -f CMakeFiles/lab2.dir/build.make CMakeFiles/lab2.dir/src/hello.cpp.s
 .PHONY : src/hello.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -156,7 +169,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/lab2exec.dir/build.make CMakeFiles/lab2exec.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -165,7 +178,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/lab2exec.dir/build.make CMakeFiles/lab2exec.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -174,7 +187,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/lab2exec.dir/build.make CMakeFiles/lab2exec.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -184,8 +197,9 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... myapp"
 	@echo "... edit_cache"
+	@echo "... lab2exec"
+	@echo "... lab2"
 	@echo "... src/hello.o"
 	@echo "... src/hello.i"
 	@echo "... src/hello.s"

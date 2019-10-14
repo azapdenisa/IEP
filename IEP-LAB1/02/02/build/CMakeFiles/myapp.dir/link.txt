@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/myapp.dir/src/hello.cpp.o CMakeFiles/myapp.dir/src/main.cpp.o  -o myapp 
+/usr/bin/c++    -rdynamic CMakeFiles/myapp.dir/src/main.cpp.o  -o myapp 

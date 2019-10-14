@@ -63,41 +63,74 @@ CMAKE_BINARY_DIR = /home/denia/Downloads/IEP/IEP-LAB1/02/02/build
 # Directory level rules for the build root directory
 
 # The main recursive "clean" target.
-clean: CMakeFiles/myapp.dir/clean
+clean: CMakeFiles/lab2exec.dir/clean
+clean: CMakeFiles/lab2.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/myapp.dir
+# Target rules for target CMakeFiles/lab2exec.dir
 
 # All Build rule for target.
-CMakeFiles/myapp.dir/all:
-	$(MAKE) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/depend
-	$(MAKE) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/denia/Downloads/IEP/IEP-LAB1/02/02/build/CMakeFiles --progress-num=1,2,3 "Built target myapp"
-.PHONY : CMakeFiles/myapp.dir/all
+CMakeFiles/lab2exec.dir/all: CMakeFiles/lab2.dir/all
+	$(MAKE) -f CMakeFiles/lab2exec.dir/build.make CMakeFiles/lab2exec.dir/depend
+	$(MAKE) -f CMakeFiles/lab2exec.dir/build.make CMakeFiles/lab2exec.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/denia/Downloads/IEP/IEP-LAB1/02/02/build/CMakeFiles --progress-num=3,4 "Built target lab2exec"
+.PHONY : CMakeFiles/lab2exec.dir/all
 
 # Include target in all.
-all: CMakeFiles/myapp.dir/all
+all: CMakeFiles/lab2exec.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/myapp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/denia/Downloads/IEP/IEP-LAB1/02/02/build/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/myapp.dir/all
+CMakeFiles/lab2exec.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/denia/Downloads/IEP/IEP-LAB1/02/02/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/lab2exec.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/denia/Downloads/IEP/IEP-LAB1/02/02/build/CMakeFiles 0
-.PHONY : CMakeFiles/myapp.dir/rule
+.PHONY : CMakeFiles/lab2exec.dir/rule
 
 # Convenience name for target.
-myapp: CMakeFiles/myapp.dir/rule
+lab2exec: CMakeFiles/lab2exec.dir/rule
 
-.PHONY : myapp
+.PHONY : lab2exec
 
 # clean rule for target.
-CMakeFiles/myapp.dir/clean:
-	$(MAKE) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/clean
-.PHONY : CMakeFiles/myapp.dir/clean
+CMakeFiles/lab2exec.dir/clean:
+	$(MAKE) -f CMakeFiles/lab2exec.dir/build.make CMakeFiles/lab2exec.dir/clean
+.PHONY : CMakeFiles/lab2exec.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/lab2.dir
+
+# All Build rule for target.
+CMakeFiles/lab2.dir/all:
+	$(MAKE) -f CMakeFiles/lab2.dir/build.make CMakeFiles/lab2.dir/depend
+	$(MAKE) -f CMakeFiles/lab2.dir/build.make CMakeFiles/lab2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/denia/Downloads/IEP/IEP-LAB1/02/02/build/CMakeFiles --progress-num=1,2 "Built target lab2"
+.PHONY : CMakeFiles/lab2.dir/all
+
+# Include target in all.
+all: CMakeFiles/lab2.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/lab2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/denia/Downloads/IEP/IEP-LAB1/02/02/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/lab2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/denia/Downloads/IEP/IEP-LAB1/02/02/build/CMakeFiles 0
+.PHONY : CMakeFiles/lab2.dir/rule
+
+# Convenience name for target.
+lab2: CMakeFiles/lab2.dir/rule
+
+.PHONY : lab2
+
+# clean rule for target.
+CMakeFiles/lab2.dir/clean:
+	$(MAKE) -f CMakeFiles/lab2.dir/build.make CMakeFiles/lab2.dir/clean
+.PHONY : CMakeFiles/lab2.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
