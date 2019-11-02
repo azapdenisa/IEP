@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <iostream>
-#include <string.h>
+#include <string>
 #include <list>
-#include "../inc/aeroport.hpp"
+//#include "../inc/aeroport.hpp"
 #include "../../avion/src/avion.cpp"
 
 using namespace std;
@@ -10,7 +10,7 @@ using namespace std;
 class Aeroport {
 
     private:
-        list<Avion> avioane;
+        list <Avion*> avioane;
 
     public:
 
@@ -25,6 +25,25 @@ class Aeroport {
 		(*it)->print();
 
         }
+	}
+	};
+
+	void adaugareAvionMarfa(Marfa *marfa){
+		
+		avioane.push_back(marfa);
+	};
+	
+	void adaugareAvionPasageri(Pasageri *pasageri)
+	{
+		
+		avioane.push_back(pasageri);
+	};
+
+	void stergeAvionByID(int id){
+
+		list<Avion*>::iterator it;
+	    for (it = avioane.begin(); it != avioane.end(); ++it)
+		if ((*it)->getId() == id) avioane.remove(*it);
+		
 	};
 };
-
