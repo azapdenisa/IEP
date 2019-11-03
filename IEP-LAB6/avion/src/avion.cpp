@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <iostream>
-#include <string.h>
+#include <string>
 #include <list>
 // #include <inc/avion.hpp>
 
@@ -8,8 +8,22 @@ using namespace std;
 
 class Componenta {
 
+    public:
+    
     virtual void printComponenta(){
         cout<<"Componenta\n";
+    };
+
+    virtual bool isAripi(){
+        return true;
+    };
+
+    virtual bool isCorp(){
+        return true;
+    };
+
+    virtual bool isMotoare(){
+        return true;
     };
 
 };
@@ -20,6 +34,8 @@ class Aripi:public Componenta {
         bool zboara;
 
     public:
+
+        Aripi();
 
         Aripi(bool zboara) {
             this->zboara=zboara;
@@ -36,6 +52,14 @@ class Aripi:public Componenta {
 
         bool isAripi(){
             return true;
+        };
+
+         bool isCorp(){
+            return false;
+        };
+
+        bool isMotoare(){
+            return false;
         };
 
 };
@@ -66,6 +90,14 @@ class Motoare:public Componenta {
         bool isMotoare(){
             return true;
         };
+
+         bool isAripi(){
+            return false;
+        };
+
+         bool isCorp(){
+            return false;
+        };
 };
 
 class Corp:public Componenta {
@@ -74,6 +106,8 @@ class Corp:public Componenta {
         int id;
 
     public:
+
+        Corp();
 
         Corp(int id){
             this->id=id;
@@ -90,29 +124,45 @@ class Corp:public Componenta {
         bool isCorp(){
             return true;
         };
+
+         bool isAripi(){
+            return false;
+        };
+
+        bool isMotoare(){
+            return false;
+        };
 };
 
 class Avion{
 
     protected:
+        int id;
         Aripi* a;
         Motoare* m;
         Corp* c;
 
     public:
 
-        Avion(Aripi* a, Motoare* m, Corp* c){
+        Avion(int id, Aripi* a, Motoare* m, Corp* c){
             this->a = a;
             this->m = m;
             this->c = c;
+            this->id=id;
         };
 
-        void esteFunctional(){
-            if (a->isAripi() && m->isMotoare() && c->isCorp())
-                cout<<"Este functional\n";
+        int getId(){
+            return id;
         };
 
-        virtual void print();
+         void esteFunctional(){
+             if (a->isAripi() && m->isMotoare() && c->isCorp())
+                 cout<<"Este functional\n";
+         };
+
+        virtual void print(){
+            cout<<"Avion"<<endl;
+        };
 
 };
 
@@ -122,12 +172,12 @@ class Marfa:public Avion{
         string culoare;
 
     public:
-        Marfa(Aripi* a, Motoare* m, Corp* c, string culoare):Avion(a,m,c){
+        Marfa(int id, Aripi* a, Motoare* m, Corp* c, string culoare):Avion(id,a,m,c){
             this->culoare=culoare;
         };
 
         void print(){
-            cout<<"Avion de marfa - culoare: "<<this->culoare<<endl;
+            cout<<"Avion de marfa - culoare: "<< this->culoare <<endl;
         };
 };
 
@@ -137,7 +187,7 @@ class Pasageri:public Avion {
         int nrPasageri;
 
     public:
-        Pasageri(Aripi* a, Motoare* m, Corp* c, int nrPasageri):Avion(a,m,c){
+        Pasageri(int id, Aripi* a, Motoare* m, Corp* c, int nrPasageri):Avion(id,a,m,c){
             this->nrPasageri=nrPasageri;
         };
 
